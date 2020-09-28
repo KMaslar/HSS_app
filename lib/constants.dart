@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 const kLabelTextStyle = TextStyle(
   fontSize: 50.0,
-  //color: Color(0x1FF57BBEB),
-  color: Colors.black,
+  color: Color(0x1FF57BBEB),
   fontWeight: FontWeight.bold,
+  fontFamily: 'SegoeUI',
 );
 
 const kButtomTextStyle = TextStyle(
