@@ -90,30 +90,33 @@ class _MyScreenState extends State<MyScreen> {
                           controller: scrollController,
                           itemCount: 1,
                           itemBuilder: (BuildContext context, int index){
-                            return Column(
-                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                                children: [
-                                  Divider(
-                                    color: Color(0xFF1C7ED4),
-                                    indent: 100.0,
-                                    endIndent: 100.0,
-                                    thickness: 5.0,
-                                  ),
-                                  ButtomIcon(
-                                    iconType: Icons.add_box,
-                                    iconText: 'History Results',),
-                                  ButtomIcon(
-                                    iconType: Icons.settings,
-                                    iconText: 'Settings',),
-                                  ButtomIcon(
-                                    iconType: Icons.star_border,
-                                    iconText: 'Membership',),
-                                  ButtomIcon(
-                                    iconType: Icons.autorenew,
-                                    iconText: 'Transactions',),
-                                ],
-                              );
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                              child: Column(
+                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                   crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Divider(
+                                      color: Color(0xFF1C7ED4),
+                                      indent: 120.0,
+                                      endIndent: 120.0,
+                                      thickness: 5.0,
+                                    ),
+                                    ButtomIcon(
+                                      iconType: Icons.add_box,
+                                      iconText: 'History Results',),
+                                    ButtomIcon(
+                                      iconType: Icons.settings,
+                                      iconText: 'Settings',),
+                                    ButtomIcon(
+                                      iconType: Icons.star_border,
+                                      iconText: 'Membership',),
+                                    ButtomIcon(
+                                      iconType: Icons.autorenew,
+                                      iconText: 'Transactions',),
+                                  ],
+                                ),
+                            );
                           }),
                     );
                   },
