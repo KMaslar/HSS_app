@@ -41,42 +41,6 @@ class _MyScreenState extends State<MyScreen> {
               filter:ImageFilter.blur(sigmaX: 3, sigmaY: 3),
               child: Container(
                 color: Colors.blue.withOpacity(0.2),
-                child: Container(
-                  margin: EdgeInsets.fromLTRB(10.0, 150.0, 10.0, 5.0),
-                  padding: EdgeInsets.only(left: 20.0, right: 20.0),
-                  decoration: BoxDecoration(
-                    color: Color(0xFFF1F4F6),
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(17.0),
-                      topRight: Radius.circular(17.0),
-                    ),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Divider(
-                        color: Color(0xFF1C7ED4),
-                        indent: 100.0,
-                        endIndent: 100.0,
-                        thickness: 5.0,
-                      ),
-                      ButtomIcon(
-                        iconType: Icons.add_box,
-                        iconText: 'History Results',),
-                      ButtomIcon(
-                        iconType: Icons.settings,
-                        iconText: 'Settings',),
-                      ButtomIcon(
-                        iconType: Icons.star_border,
-                        iconText: 'Membership',),
-                      ButtomIcon(
-                        iconType: Icons.autorenew,
-                        iconText: 'Transactions',),
-                    ],
-                  ),
-                ),
               ),
             ),
           ),
@@ -109,43 +73,50 @@ class _MyScreenState extends State<MyScreen> {
                 BackdropFilter(filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
                     child: Container(
                       color: Colors.blue.withOpacity(0.5),
-                      child: Container(
-                        margin: EdgeInsets.fromLTRB(10.0, 150.0, 10.0, 5.0),
-                        padding: EdgeInsets.only(left: 20.0, right: 20.0),
-                        decoration: BoxDecoration(
-                          color: Color(0xFFF1F4F6),
-                          shape: BoxShape.rectangle,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(17.0),
-                            topRight: Radius.circular(17.0),
-                          ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Divider(
-                              color: Color(0xFF1C7ED4),
-                              indent: 100.0,
-                              endIndent: 100.0,
-                              thickness: 5.0,
-                            ),
-                            ButtomIcon(
-                              iconType: Icons.add_box,
-                              iconText: 'History Results',),
-                            ButtomIcon(
-                              iconType: Icons.settings,
-                              iconText: 'Settings',),
-                            ButtomIcon(
-                              iconType: Icons.star_border,
-                              iconText: 'Membership',),
-                            ButtomIcon(
-                              iconType: Icons.autorenew,
-                              iconText: 'Transactions',),
-                          ],
-                        ),
-                      ),
                     ),
+                ),
+
+                DraggableScrollableSheet(
+                  initialChildSize: 0.4,
+                  minChildSize: 0.2,
+                  maxChildSize: 0.8,
+                  builder: (BuildContext context, ScrollController scrollController )
+                  {
+                    return Container(
+                      color: Colors.white,
+                      child: GridView.builder(
+                          gridDelegate:
+                          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1),
+                          controller: scrollController,
+                          itemCount: 1,
+                          itemBuilder: (BuildContext context, int index){
+                            return Column(
+                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                 crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  Divider(
+                                    color: Color(0xFF1C7ED4),
+                                    indent: 100.0,
+                                    endIndent: 100.0,
+                                    thickness: 5.0,
+                                  ),
+                                  ButtomIcon(
+                                    iconType: Icons.add_box,
+                                    iconText: 'History Results',),
+                                  ButtomIcon(
+                                    iconType: Icons.settings,
+                                    iconText: 'Settings',),
+                                  ButtomIcon(
+                                    iconType: Icons.star_border,
+                                    iconText: 'Membership',),
+                                  ButtomIcon(
+                                    iconType: Icons.autorenew,
+                                    iconText: 'Transactions',),
+                                ],
+                              );
+                          }),
+                    );
+                  },
                 ),
               ],
             ),
