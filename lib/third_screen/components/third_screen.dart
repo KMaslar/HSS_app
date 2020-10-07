@@ -14,8 +14,7 @@ class ThirdScreen extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [Colors.transparent, Colors.lightBlueAccent]).// koga se obiduvam da go napravam gradientot od transparenten do bel, ne se slucuva nisto?
-                createShader(Rect.fromLTRB(50, -10, rect.width-50, rect.height-100));
-              },
+                createShader(Rect.fromLTRB(50, -10, rect.width-50, rect.height-100));},
                 blendMode: BlendMode.darken,
                 child: Container(
                   decoration: BoxDecoration(
@@ -49,9 +48,9 @@ class ThirdScreen extends StatelessWidget {
               //     ),
               //   ],
               // ),
-              Column(
-                children: [
-                  Expanded(
+                Positioned(
+                  left: 30.0,
+                    top: MediaQuery.of(context).size.height/3,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,12 +59,14 @@ class ThirdScreen extends StatelessWidget {
                         Text('Something went wrong!', style: kButtomTextStyleSecondScreen,)
                       ],
                     ),
-                    flex: 2,
                   ),
-                  Expanded(
+                  Positioned(
+                    bottom: 20.0,
+                    left: 30.0,
+                    right: 20.0,
                     child: Container(
-                     // margin: EdgeInsets.all(30.0),
                       padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 25.0),
+                      width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         color: Color(0xFFF1F2F6),
                         borderRadius: BorderRadius.circular(20.0),
@@ -73,8 +74,8 @@ class ThirdScreen extends StatelessWidget {
                           BoxShadow(
                             color: Color(0xFFD6D6D6),
                             blurRadius: 18.0,
-                            spreadRadius: 5.0,
-                            offset: Offset(6, 6),
+                            spreadRadius: 1.0,
+                            offset: Offset(3, 6),
                           )
                         ],),
                       child: FlatButton(
@@ -84,11 +85,7 @@ class ThirdScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    flex: 0,
                   ),
-                ],
-              ),
-
             ],
           ),
           ),
