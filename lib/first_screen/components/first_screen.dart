@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'constants.dart';
+import '../../constants.dart';
+import 'main_buttom_gesture.dart';
+import 'rectangle_main_buttom.dart';
 
 class FirstScreen extends StatefulWidget {
   @override
@@ -56,30 +57,7 @@ class _FirstScreenState extends State<FirstScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    padding: EdgeInsets.fromLTRB(10.0, 15.0, 85.0, 15.0),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFF1F2F6),
-                      borderRadius: BorderRadius.circular(20.0),
-                      boxShadow: [
-                        BoxShadow(
-                         color: Color(0xFFD6D6D6),
-                          blurRadius: 18.0,
-                          spreadRadius: 5.0,
-                          offset: Offset(6, 6),
-                        )
-                      ],),
-
-                    child: FlatButton.icon(onPressed: (){},
-                      icon: Icon(Icons.update, color: Color(0xFF1C7ED4), size: 35.0,),
-                        label: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [ Text('Reminders', style: TextStyle(color: Color(0xFF707070), fontSize: 20.0, fontWeight: FontWeight.bold, fontFamily: 'SegoeUI')),
-                            Text('Have you taken your pills', style: TextStyle(color: Color(0xFF1C7ED4), fontFamily: 'SegoeUI', fontSize: 12.0))],
-                        ),
-                    ),
-                  ),
+                  RectangleMainButtom(buttomIcon: Icons.update,largeLabel: 'Reminder', smallLabel: 'Have you take your pills',),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -115,40 +93,5 @@ class _FirstScreenState extends State<FirstScreen> {
   }
 }
 
-class MainButtomGesture extends StatelessWidget {
-  AssetImage imageIcon;
-  final String iconText;
-  Function onPressed;
 
-  MainButtomGesture ({this.imageIcon, this.iconText, this.onPressed});
 
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-    onTap: onPressed,
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.all(35.0),
-              decoration: BoxDecoration(
-                color: Color(0xFFF1F2F6),
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0xFFD6D6D6),
-                      blurRadius: 18.0,
-                      spreadRadius: 5.0,
-                      offset: Offset(6, 6),
-                    )
-                  ],),
-                child: Image(image: imageIcon),
-              ),
-                SizedBox(height: 15.0,),
-                Text(iconText,
-                  style: TextStyle(fontFamily: 'SegoeUI', color: Color(0xFF707070), fontSize: 15.0 ),
-                ),
-          ],
-        ),
-    );
-  }
-}
