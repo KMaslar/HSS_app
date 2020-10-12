@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'second_screen.dart';
 import 'first_screen/components/first_screen.dart';
 import 'third_screen/components/third_screen.dart';
+import 'login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-         '/': (context)  => ThirdScreen(),
+         '/': (context)  => LoginScreen(),
         '/slider': (context) => SecondScreen(),
       },
     );

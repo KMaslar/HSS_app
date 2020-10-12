@@ -60,4 +60,16 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation platform('com.google.firebase:firebase-bom:25.11.0')
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+    compile 'com.android.support:multidex:1.0.1' //enter the latest version
+}
+android {
+    defaultConfig {
+        multiDexEnabled true
+    }
 }
