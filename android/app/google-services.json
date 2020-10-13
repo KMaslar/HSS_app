@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "657757634499",
-    "firebase_url": "https://flutterapp-kostadina.firebaseio.com",
-    "project_id": "flutterapp-kostadina",
-    "storage_bucket": "flutterapp-kostadina.appspot.com"
+    "project_number": "1097765206894",
+    "firebase_url": "https://hssproject-9c4bf.firebaseio.com",
+    "project_id": "hssproject-9c4bf",
+    "storage_bucket": "hssproject-9c4bf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:657757634499:android:208b73bd1e2aebdea28776",
+        "mobilesdk_app_id": "1:1097765206894:android:14608dc32d0038f760df7f",
         "android_client_info": {
           "package_name": "exemple.flutter_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "657757634499-ra8jvtp2067tmodhopk024o2pc0nia8n.apps.googleusercontent.com",
+          "client_id": "1097765206894-2cle3a81guutpr7t6325k2qdslbo7cq0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDrk1xdZiH30rzsfB47rkooY2a2cqeS1QA"
+          "current_key": "AIzaSyDjPkXGZVG570hyK6jo5C9nvorG5QlYj5g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "657757634499-ra8jvtp2067tmodhopk024o2pc0nia8n.apps.googleusercontent.com",
+              "client_id": "1097765206894-2cle3a81guutpr7t6325k2qdslbo7cq0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
