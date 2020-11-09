@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'second_screen.dart';
-import 'first_screen/components/first_screen.dart';
-import 'third_screen/components/third_screen.dart';
+import 'home_screen_hamburger_menu_active.dart';
+import 'first_screen/components/home_screen_6.dart';
+import 'login_screen_unsucessful_register/login_screen_unsucessful_register.dart';
 import 'login_screen.dart';
 
 void main() {
@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-         '/': (context)  => LoginScreen(),
-        '/slider': (context) => SecondScreen(),
+         '/': (context)  => FirstScreen(),
+        '/slider': (context) => HomeScreenHamburgerMenuActive(),
       },
     );
   }

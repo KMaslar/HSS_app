@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import '../../constants.dart';
+import '../constants.dart';
 import 'main_buttom_gesture.dart';
 import 'rectangle_main_buttom.dart';
 
-class FirstScreen extends StatefulWidget {
+class HomeScreen6 extends StatefulWidget {
   @override
-  _FirstScreenState createState() => _FirstScreenState();
+  _HomeScreen6State createState() => _HomeScreen6State();
 }
 
-class _FirstScreenState extends State<FirstScreen> {
+class _HomeScreen6State extends State<HomeScreen6> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

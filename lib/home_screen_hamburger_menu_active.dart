@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'dart:ui';
 
-class SecondScreen extends StatefulWidget {
+class HomeScreenHamburgerMenuActive extends StatefulWidget {
   @override
-  _SecondScreenState createState() => _SecondScreenState();
+  _HomeScreenHamburgerMenuActiveState createState() => _HomeScreenHamburgerMenuActiveState();
 }
 
-class _SecondScreenState extends State<SecondScreen> {
+class _HomeScreenHamburgerMenuActiveState extends State<HomeScreenHamburgerMenuActive> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

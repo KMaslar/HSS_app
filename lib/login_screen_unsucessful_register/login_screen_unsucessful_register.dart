@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../constants.dart';
+import '../constants.dart';
 import 'rectangle_buttom.dart';
 
-class ThirdScreen extends StatelessWidget {
+class LoginScreenUnsucessfulRegister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
